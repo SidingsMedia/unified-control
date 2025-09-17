@@ -1,0 +1,9 @@
+HTTP/1.0 401 Unauthorized
+Cache-Control: no-cache
+Connection: close
+Content-Type: application/json
+
+{
+  "code": 401,
+  "message": "JWT has expired"
+}

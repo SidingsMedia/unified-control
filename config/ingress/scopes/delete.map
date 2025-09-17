@@ -1,0 +1,2 @@
+# endpoint                  scope
+/api/v1/rdns/cache          write:rdns:cache
