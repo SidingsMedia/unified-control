@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2022-2025 Sidings Media <contact@sidingsmedia.com>
+# SPDX-License-Identifier: MIT
+
+services:
+  ingress:
+    image: haproxy:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config/ingress:/usr/local/etc/haproxy
+    depends_on:
+      - frontend
+      - rdns
+
+  frontend:
+    image: nginx:latest
+    restart: always
+    volumes:
+      - ./config/frontend/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./config/frontend/dist:/usr/share/nginx/html
+  rdns:
+    image: ghcr.io/sidingsmedia/unified-control-rdns:latest
+    restart: always
+    volumes:
+      - ./config/rdns/config.yaml:/etc/server/config.yaml

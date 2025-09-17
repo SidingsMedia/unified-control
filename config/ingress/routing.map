@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2022-2025 Sidings Media <contact@sidingsmedia.com>
+# SPDX-License-Identifier: MIT
+
+# endpoint              backend
+/                       frontend
+/api/v1/rdns		    rdns
+
+# Handle API 404s
+/api                    default_json

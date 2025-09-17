@@ -1,0 +1,10 @@
+HTTP/1.0 429 Too Many Requests
+Cache-Control: no-cache
+Connection: close
+Content-Type: application/json
+Retry-After: 60
+
+{
+  "code": 429,
+  "message": "Too many requests"
+}

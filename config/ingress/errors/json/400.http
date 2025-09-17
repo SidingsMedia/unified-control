@@ -1,0 +1,9 @@
+HTTP/1.0 400 Bad request
+Cache-Control: no-cache
+Connection: close
+Content-Type: application/json
+
+{
+  "code": 400,
+  "message": "Client sent a request we could not interpret"
+}

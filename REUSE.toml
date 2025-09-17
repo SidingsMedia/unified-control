@@ -1,4 +1,11 @@
 version = 1
-SPDX-PackageName = "unified-control-rdns"
+SPDX-PackageName = "unified-control"
 SPDX-PackageSupplier = "Sidings Media <contact@sidingsmedia.com>"
-annotations = []
+
+[[annotations]]
+path = ["config/ingress/errors/**/*.http"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Sidings Media"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+

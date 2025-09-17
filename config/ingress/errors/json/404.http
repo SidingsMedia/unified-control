@@ -1,0 +1,9 @@
+HTTP/1.0 404 Not Found
+Cache-Control: no-cache
+Connection: close
+Content-Type: application/json
+
+{
+  "code": 404,
+  "message": "The requested resource could not be found"
+}

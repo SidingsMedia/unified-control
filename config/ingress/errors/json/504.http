@@ -1,0 +1,9 @@
+HTTP/1.0 504 Gateway Time-out
+Cache-Control: no-cache
+Connection: close
+Content-Type: application/json
+
+{
+  "code": 504,
+  "message": "Server did not respond in time"
+}
