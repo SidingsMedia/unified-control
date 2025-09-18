@@ -8,3 +8,4 @@ config/*
 config/frontend/dist
 !config/ingress
 *.pem
+*.acl
