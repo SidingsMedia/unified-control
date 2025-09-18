@@ -9,6 +9,7 @@ services:
       - "8080:8080"
     volumes:
       - ./config/ingress:/usr/local/etc/haproxy
+      - ./certs/oauth.pem:/oauth.pem
     depends_on:
       - frontend
       - rdns
