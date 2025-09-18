@@ -28,18 +28,18 @@ function has_value (tab, val)
 end
 
 
-function verify_scopes(txn, scopes, required_scopes)
-    local jwt_scopes_list = split(scopes)
-    local required_scopes_list = split(required_scopes)
+function verify_scopes(txn)
+    local jwt_scopes_list = split(txn.get_var(txn, "txn.scope"), " ")
+    local required_scopes_list = split(txn.get_var(txn, "txn.required_scopes"), ",")
 
     for i, scope in ipairs(required_scopes_list) do
-        if scope == "*" do
+        if scope == "*" then
             -- If it is a * we allow everything
             txn.set_var(txn, "txn.verify_scopes_result", true)
             return
         end
 
-        if !has_value(jwt_scopes_list, scope) do
+        if not has_value(jwt_scopes_list, scope) then
             txn.set_var(txn, "txn.verify_scopes_result", false)
             return
         end

@@ -2,6 +2,6 @@
 # SPDX-License-Identifier: MIT
 
 # endpoint                  scope
-/api/v1/rdns/healthy        *
+/api/v1/rdns/health         *
 /api/v1/rdns/servers        read:rdns:servers
-/api/v1/rdns/cache          read:rdns:cache
+/api/v1/rdns/cache          read:rdns:cache,read:rdns:servers
