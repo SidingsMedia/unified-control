@@ -1,2 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Sidings Media <contact@sidingsmedia.com>
+# SPDX-License-Identifier: MIT
+
 # endpoint                  scope
 /api/v1/rdns/cache          write:rdns:cache
