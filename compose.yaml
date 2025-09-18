@@ -25,3 +25,4 @@ services:
     restart: always
     volumes:
       - ./config/rdns/config.yaml:/etc/server/config.yaml
+      - /etc/ssl/certs:/etc/ssl/certs
